@@ -1,0 +1,84 @@
+﻿@using MalosanuTheme.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<h3>Login</h3>
+<div class="row jumbotron">
+    <div class="col-md-8" style="background-color:#2f2f2f">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4 style="color: white">Use a local account to log in.</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "control-label col-md-2", style = "color: white" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "control-label col-md-2", style = "color: white" })
+                    <div class="col-md-4">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-4">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe, htmlAttributes: new { style = "color: white; font-size:16px"})
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-4">
+                        <input type="submit" value="Log in" class="btn btn-large btn-theme" />
+                    </div>
+                </div>
+                <p>
+                    @Html.ActionLink("Register as a new user", "Register", null, htmlAttributes: new { style = "color: white" })
+                </p>
+                @* Enable this once you have account confirmation enabled for password reset functionality
+                    <p>
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                    </p>*@
+            }
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@*<div class="col-lg-7">
+    <h3>Drop Me A Line</h3>
+    <br>
+    <form role="form" action="" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="name1">Your Name</label>
+            <input type="text" name="Name" class="form-control" id="name1" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+            <label for="email1">Email address</label>
+            <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label>Your Text</label>
+            <textarea class="form-control" name="Message" rows="3"></textarea>
+        </div>
+        <br>
+        <input type="submit" class="btn-large btn-theme" />
+    </form>
+</div>*@

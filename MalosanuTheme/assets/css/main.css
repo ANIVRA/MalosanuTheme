@@ -1,0 +1,538 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://Alvarez.is
+ *
+ * Project Name: Flat & Scroll 2 - Bootstrap 3 vCard Theme
+ * Version: 1.1
+ * Date: 09-17-2013
+ * URL: http://alvarez.is/demo/fs2/
+ */
+
+
+body {
+  padding-top: 0px;
+  background-color: #ececec;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #3bc492;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #c0392b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.modal-header {
+	background-color: #2f2f2f;
+	color: white;
+}
+
+.modal-title {
+	color: white
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background: url(../img/header-bg.jpg) no-repeat center top;
+	margin-top: -10px;
+	padding-top: 30px;
+	text-align: center;
+	background-attachment: inherit;
+	background-position: center center;
+	min-height: 700px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	font-weight: 700;
+	font-size: 70px;
+	color: #494848;
+	margin-bottom: 20px;
+}
+
+#headerwrap h4 {
+	color: #494848;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+#foliowrap {
+	background: url(../img/foliowrap.jpg) no-repeat center top;
+	margin-top: 30px;
+	padding-top:50px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 800px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#foliowrap h3 {
+	font-size: 35px;
+	color: white;
+	text-align: center;
+	font-weight: 700;
+}
+
+#testimonial {
+	background: url(../img/mint.jpg) no-repeat center top;
+	margin-top: 80px;
+	padding-top:80px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 440px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#testimonial h1 {
+	color: white;
+	font-size: 38px;
+}
+
+#testimonial h2 {
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#footerwrap {
+	background-color: #2f2f2f;
+	color: white;
+	margin-top: 50px;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	text-align: left;
+}
+
+#footerwrap h3 {
+	font-size: 28px;
+	color: white;
+}
+
+#footerwrap p {
+	color: white;
+	font-size: 18px;
+}
+
+.about, .services {
+	padding-top: 40px;
+	text-align: center
+}
+
+.about h3 {
+	font-size: 35px;
+}
+
+.about h4 {
+	font-size: 20px;
+	text-align: left;
+}
+.about h5 {
+	font-size: 14px;
+	color: #bebdbd;
+	font-weight: 700;
+}
+
+.about, .services p {
+	text-align: left;
+}
+
+.services h3 {
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.services h4 {
+	font-size: 25px;
+}
+
+.service-line {
+	border-bottom: 3px solid transparent;
+}
+
+.service-line:hover {
+	border-bottom: 3px solid #8e7557;
+	background-color: #f2f2f2;
+}
+
+#chartwrap {
+	width: 100%;
+	text-align: center;
+}
+
+.label {
+	padding-bottom: 15px;
+}
+
+.centered {
+	text-align: center;
+}
+
+
+/* ==========================================================================
+   Image Mask
+   ========================================================================== */
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	/*width: 100%;*/
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #fff;
+	background: #8e7557;
+}
+
+.grid figcaption h5 {
+	margin: 0;
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	color: #fff;
+	font-weight: 700;
+	text-align: left;
+	letter-spacing: 2px;
+	
+}
+
+.grid figcaption a {
+	text-align: left;
+	padding: 5px 10px;
+	margin-left: 20px;
+	display: inline-block;
+	background: #2f2f2f;
+	color: #fff;
+	font-size: 13px;
+}
+
+/* Caption Style */
+.mask figure {
+	overflow: hidden;
+}
+
+.mask figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .mask figure:hover img,
+.mask figure.cs-hover img {
+	-webkit-transform: translateY(-30px);
+	-moz-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	transform: translateY(-30px);
+}
+
+.mask figcaption {
+	height: 50px;
+	width: inherit;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .mask figure:hover figcaption,
+.mask figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.mask figcaption a {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	right: 30px;
+}
+
+
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+.accordion-heading {
+	margin-top: : 30px;
+	padding-bottom: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+}
+
+.accordion-inner h4 {
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 25px;
+	
+}
+
+.accordion-heading plus {
+	font-size: 30px;
+	font-weight: 700;
+	color: #8e7557;
+	font-family: 'Raleway', sans-serif;
+	vertical-align: middle;
+}
+
+.accordion-heading date {
+	background-color: #2f2f2f;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	padding: 8px; 
+}
+
+.accordion-heading a {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: #333;
+}
+
+.accordion-heading a:hover {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: #8e7557;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   Pricing Tables
+   ========================================================================== */
+   
+.pricing-option {
+    padding-bottom: 40px;
+}
+
+.pricing-option .pricing-top {
+    position: relative;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    padding: 40px 20px 30px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pricing-option .pricing-top .special-label {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #8e7557;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.special .pricing-top {
+    background: black;
+}
+
+.pricing-option .pricing-edition {
+    text-transform: uppercase;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+
+.pricing-option .price {
+    display: inline-block;
+    position: relative;
+}
+
+.pricing-option .price sup {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    font-size: 24px;
+}
+
+.pricing-option .price .price-amount {
+    font-size: 108px;
+    letter-spacing: -4px;
+}
+
+.pricing-option .price small {
+    position: relative;
+    left: -10px;
+    font-size: 18px;
+}
+
+.pricing-option ul {
+    list-style: none;
+    margin: 0;
+    background: #ffffff;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.pricing-option ul li {
+    border-bottom: solid 1px #e1e1e1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pricing-option .pricing-signup {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 10px;
+    color: white;
+    background: #8e7557;
+}
+
+.pricing-option .pricing-signup:hover {
+    background: #766148;
+}
+
+
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.form-control {
+	padding: 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+
+.form-group label {
+	font-family: 'Raleway'; sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.btn-theme {
+	color: #fff;
+	background-color: #8e7557;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-weight: 700;
+	border-radius: 3px;
+}
+
+.btn-theme:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #766148;
+	
+}
